@@ -10,12 +10,12 @@
 
 Описание страниц приложения 
 1. Страница входа 
-Используйте готовый адаптивный шаблон: https://ui.shadcn.com/blocks#authentication 01. 
+Используйте готовый адаптивный шаблон: https://ui.shadcn.com/blocks#authentication01. 
 Аутентификация с использованием пары JWT токенов через API. 
 Используйте GraphQL мутации login , refreshToken . 
 После успешного входа пользователь должен оказаться на странице My Info / Time Off.
 2. Страница My Info / Time Off 
 Ссылка на макет с адаптивным дизайном: 
-https://www.figma.com/design/vS21LQxUY8JnQUzG9yIuyR/HarmonyHR-test-task?node id=1-610&t=7O3Wdsd2QEEZwC3W-4. 
+https://www.figma.com/design/vS21LQxUY8JnQUzG9yIuyR/HarmonyHR-test-task?nodeid=1-610&t=7O3Wdsd2QEEZwC3W-4. 
 Получайте данные с помощью GraphQL запроса myProfile (используйте только полученные name и avatar , остальное заполните тестовыми данными как на макете). 
 Добавьте работающую кнопку выхода из системы в правом верхнем углу. Доступ к странице должен быть только у авторизованных пользователей.
