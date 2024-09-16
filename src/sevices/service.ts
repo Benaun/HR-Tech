@@ -1,13 +1,6 @@
-import { useLoginStore } from '@/store/loginStore';
-import { ApolloClient, InMemoryCache, HttpLink } from '@apollo/client';
+import { useLoginStore } from '@/store/store';
 import { gql } from '@apollo/client'
-
-export const client = new ApolloClient({
-  link: new HttpLink({
-    uri: 'https://api.escuelajs.co/graphql',
-  }),
-  cache: new InMemoryCache()
-})
+import client from '../lib/apollo-client';
 
 const LOGIN = gql`
      mutation Login($email: String!, $password: String!) {
@@ -16,7 +9,7 @@ const LOGIN = gql`
          refresh_token
        }
      }
-   `;
+`;
 
 const REFRESH_TOKEN = gql`
   mutation RefreshToken($refreshToken: String!) {
