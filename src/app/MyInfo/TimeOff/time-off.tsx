@@ -1,14 +1,15 @@
 'use client'
 
-import { Button } from "@/ui/button"
 import { useLoginStore } from "@/store/store"
 import { useRouter } from "next/navigation"
 import { useEffect, useState } from "react"
+import Header from "./components/header/header"
 import Profile from "./components/profile/profile"
+import Content from "./components/content/content"
 
 export default function TimeOff() {
     const router = useRouter()
-    const { accessToken, clearTokens } = useLoginStore.getState();
+    const { accessToken } = useLoginStore.getState();
     const [isAuth, setIsAuth] = useState(false);
     
 
@@ -24,15 +25,11 @@ export default function TimeOff() {
         return null
     }
 
-    const handleClick = () => {
-        clearTokens()
-        router.push('/login')
-    }
-
     return (
-        <div className="flex gap-5">
-            <Profile />
-            <Button onClick={handleClick}>Close</Button>
+        <div className="flex flex-col">
+            <Header />
+            <Profile/>
+            <Content/>
         </div>
     )
 }
