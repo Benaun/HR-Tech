@@ -15,9 +15,9 @@ export default function Navigation() {
         setIsActive(id)
     }
     return (
-        <nav className="flex w-1/3">
+        <nav className="flex w-[523px]">
             <NavigationMenu>
-                <NavigationMenuList className="flex">
+                <NavigationMenuList className="flex text-lg">
                     {navList.map((item) => {
                         return (
                             <NavigationMenuItem
@@ -26,7 +26,7 @@ export default function Navigation() {
                             >
                                 <NavigationMenuTrigger
                                     onClick={() => handleClick(item.id)}
-                                    className={cn('p-4', item.id === isActive ? 'bg-[#DAE6F2] rounded-t-[8px]' : 'bg-transparent')}
+                                    className={cn('p-4', item.id === isActive ? 'bg-[#F0F3F8] rounded-t-[8px]' : 'bg-transparent')}
                                 >
                                     {item.title}
                                 </NavigationMenuTrigger>
@@ -36,6 +36,5 @@ export default function Navigation() {
                 </NavigationMenuList>
             </NavigationMenu>
         </nav>
-
     )
 }
